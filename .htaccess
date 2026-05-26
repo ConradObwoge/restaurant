@@ -1,0 +1,50 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Redirect to HTTPS (if SSL installed)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(config\.json|\.env|package\.json|seed\.js)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protect admin directory
+<FilesMatch "^(admin/.*\.html)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Allow only specific IPs for admin (optional - uncomment to use)
+# <Directory "admin">
+#     Order Deny,Allow
+#     Deny from all
+#     Allow from 192.168.1.100  # Your office IP
+# </Directory>
+
+# Custom error pages
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+
+# Cache static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+</IfModule>
+
+# Compress files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
+</IfModule>
+
+# Set default charset
+AddDefaultCharset UTF-8

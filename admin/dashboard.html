@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Maakaso Kitchen</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-header">
+        <h1>🍽️ Maakaso Kitchen - Admin</h1>
+        <button onclick="logout()" class="logout-btn">Logout</button>
+    </div>
+    
+    <div class="admin-stats">
+        <div class="stat-card">
+            <h3>Today's Orders</h3>
+            <p id="todayCount">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Pending</h3>
+            <p id="pendingCount">0</p>
+        </div>
+        <div class="stat-card">
+            <h3>Revenue Today</h3>
+            <p id="todayRevenue">KES 0</p>
+        </div>
+    </div>
+
+    <div class="admin-container">
+        <div class="filters">
+            <button onclick="filterOrders('all')" class="filter-btn active">All</button>
+            <button onclick="filterOrders('pending')" class="filter-btn">⏳ Pending</button>
+            <button onclick="filterOrders('preparing')" class="filter-btn">🍳 Preparing</button>
+            <button onclick="filterOrders('delivered')" class="filter-btn">✅ Delivered</button>
+        </div>
+        <div id="orders-list" class="orders-list"></div>
+    </div>
+
+    <script src="../assets/js/admin.js"></script>
+</body>
+</html>

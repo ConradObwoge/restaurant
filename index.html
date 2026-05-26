@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Maakaso Kitchen - Online Ordering | Machakos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>🍽️ MAAKASO KITCHEN</h1>
+    <p>Machakos Town • Authentic Kenyan & Grill</p>
+</div>
+<div class="delivery-note">
+    🛵 FREE delivery within Machakos Town | Ksh 100 to Kyumbi, Kola, Mua Hills, Joska
+</div>
+<div class="sample-badge">
+    📱 ONLINE ORDERING — We deliver where Glovo does NOT reach
+</div>
+
+<div class="container">
+    <div class="delivery-area" id="deliveryInfo">
+        📍 <strong>We deliver to:</strong> Machakos Town (Free), Kyumbi (KES 100), Mua Hills (KES 100), Kola (KES 120), Joska (KES 150)<br>
+        🔥 No commission fees — order directly!
+    </div>
+
+    <!-- Customer Details Form -->
+    <div class="customer-form">
+        <h3>Your Details</h3>
+        <input type="text" id="customer-name" placeholder="Full name" required>
+        <input type="tel" id="customer-phone" placeholder="Phone number (e.g., 0712345678)" required>
+        <select id="delivery-area" required>
+            <option value="">Select delivery area</option>
+            <option value="Machakos Town">Machakos Town - FREE delivery</option>
+            <option value="Kyumbi">Kyumbi - KES 100</option>
+            <option value="Mua Hills">Mua Hills - KES 100</option>
+            <option value="Kola">Kola - KES 120</option>
+            <option value="Joska">Joska - KES 150</option>
+        </select>
+        
+        <div class="payment-methods">
+            <label><input type="radio" name="payment" value="cash" checked> 💵 Pay on Delivery</label>
+            <label><input type="radio" name="payment" value="mpesa"> 📱 M-Pesa Till: 123456</label>
+        </div>
+    </div>
+
+    <!-- MENU SECTION -->
+    <div class="menu-category">
+        <div class="category-title">🔥 Nyama Choma & Grills</div>
+        <div class="menu-item" data-name="Grilled Chicken (1/4)" data-price="350">
+            <div class="item-info"><h3>Grilled Chicken (1/4)</h3><p>With kachumbari & sukuma</p></div>
+            <div class="price">Ksh 350</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="menu-item" data-name="Nyama Choma (250g)" data-price="400">
+            <div class="item-info"><h3>Nyama Choma (250g)</h3><p>Goat meat, served with kachumbari</p></div>
+            <div class="price">Ksh 400</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="menu-item" data-name="Pilau + Chicken" data-price="350">
+            <div class="item-info"><h3>Pilau + Chicken</h3><p>Spiced rice with chicken stew</p></div>
+            <div class="price">Ksh 350</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+
+    <div class="menu-category">
+        <div class="category-title">🍛 Meals & Ugali</div>
+        <div class="menu-item" data-name="Ugali + Beef Stew" data-price="250">
+            <div class="item-info"><h3>Ugali + Beef Stew</h3><p>Hearty portion</p></div>
+            <div class="price">Ksh 250</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="menu-item" data-name="Ugali + Fried Fish" data-price="350">
+            <div class="item-info"><h3>Ugali + Fried Fish</h3><p>Whole tilapia</p></div>
+            <div class="price">Ksh 350</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="menu-item" data-name="Chips + Sausage" data-price="200">
+            <div class="item-info"><h3>Chips + Sausage</h3><p>With tomato sauce</p></div>
+            <div class="price">Ksh 200</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="menu-item" data-name="Chips + Chicken" data-price="350">
+            <div class="item-info"><h3>Chips + Chicken</h3><p>Fried chicken & chips</p></div>
+            <div class="price">Ksh 350</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+
+    <div class="menu-category">
+        <div class="category-title">🥤 Drinks</div>
+        <div class="menu-item" data-name="Soda (Pepsi/Kasi)" data-price="100">
+            <div class="item-info"><h3>Soda (Pepsi/Kasi)</h3></div>
+            <div class="price">Ksh 100</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="menu-item" data-name="Fresh Mango Juice" data-price="150">
+            <div class="item-info"><h3>Fresh Mango Juice</h3></div>
+            <div class="price">Ksh 150</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+        <div class="menu-item" data-name="Mineral Water" data-price="80">
+            <div class="item-info"><h3>Mineral Water</h3></div>
+            <div class="price">Ksh 80</div>
+            <button class="add-btn">+ Add</button>
+        </div>
+    </div>
+</div>
+
+<!-- CART SECTION -->
+<div class="cart" id="cart">
+    <div class="cart-details">
+        <span>🛒 <span id="cart-count">0</span> items</span>
+        <span>💰 <span id="cart-total">KES 0</span></span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn">Place Order</button>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

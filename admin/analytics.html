@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Maakaso Kitchen</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="admin-header">
+        <h1>📊 Sales Analytics Dashboard</h1>
+        <div>
+            <button onclick="location.href='dashboard.html'" class="nav-btn">← Orders</button>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </div>
+    
+    <div class="admin-container">
+        <!-- Date Range Filter -->
+        <div class="date-filter-card">
+            <h3>Date Range</h3>
+            <div class="date-range">
+                <input type="date" id="startDate">
+                <span>to</span>
+                <input type="date" id="endDate">
+                <button onclick="loadAnalytics()" class="filter-btn">Apply</button>
+                <button onclick="setDateRange('today')" class="filter-btn">Today</button>
+                <button onclick="setDateRange('week')" class="filter-btn">This Week</button>
+                <button onclick="setDateRange('month')" class="filter-btn">This Month</button>
+            </div>
+        </div>
+        
+        <!-- Stats Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>💰 Total Revenue</h3>
+                <p id="totalRevenue">KES 0</p>
+                <small id="revenueChange"></small>
+            </div>
+            <div class="stat-card">
+                <h3>📦 Total Orders</h3>
+                <p id="totalOrders">0</p>
+                <small id="ordersChange"></small>
+            </div>
+            <div class="stat-card">
+                <h3>⭐ Avg Order Value</h3>
+                <p id="avgOrder">KES 0</p>
+            </div>
+            <div class="stat-card">
+                <h3>📍 Top Delivery Area</h3>
+                <p id="topArea">-</p>
+            </div>
+        </div>
+        
+        <!-- Charts -->
+        <div class="charts-row">
+            <div class="chart-card">
+                <h3>Revenue Trend</h3>
+                <canvas id="revenueChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Order Volume</h3>
+                <canvas id="ordersChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="charts-row">
+            <div class="chart-card">
+                <h3>Top Selling Items</h3>
+                <canvas id="topItemsChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h3>Orders by Area</h3>
+                <canvas id="areaChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Top Items List -->
+        <div class="top-items-card">
+            <h3>🏆 Best Selling Items</h3>
+            <div id="topItemsList" class="items-list"></div>
+        </div>
+        
+        <!-- Payment Method Breakdown -->
+        <div class="payment-breakdown">
+            <h3>💳 Payment Methods</h3>
+            <div id="paymentStats" class="payment-stats"></div>
+        </div>
+    </div>
+    
+    <script src="../assets/js/analytics.js"></script>
+</body>
+</html>

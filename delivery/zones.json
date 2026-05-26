@@ -1,0 +1,74 @@
+{
+    "zones": [
+        {
+            "name": "Machakos Town",
+            "fee": 0,
+            "glovo_available": true,
+            "estimated_time": "15-20 min",
+            "active": true,
+            "description": "Free delivery within town"
+        },
+        {
+            "name": "Machakos Junction",
+            "fee": 0,
+            "glovo_available": true,
+            "estimated_time": "10-15 min",
+            "active": true,
+            "description": "Near the main junction"
+        },
+        {
+            "name": "Kyumbi",
+            "fee": 100,
+            "glovo_available": false,
+            "estimated_time": "30-40 min",
+            "active": true,
+            "description": "⚠️ Glovo does NOT deliver here! Order directly from us."
+        },
+        {
+            "name": "Mua Hills",
+            "fee": 100,
+            "glovo_available": false,
+            "estimated_time": "35-45 min",
+            "active": true,
+            "description": "⚠️ Glovo does NOT deliver here! Order directly from us."
+        },
+        {
+            "name": "Kola",
+            "fee": 120,
+            "glovo_available": false,
+            "estimated_time": "40-50 min",
+            "active": true,
+            "description": "⚠️ Glovo does NOT deliver here! Order directly from us."
+        },
+        {
+            "name": "Joska",
+            "fee": 150,
+            "glovo_available": false,
+            "estimated_time": "45-60 min",
+            "active": true,
+            "description": "⚠️ Glovo does NOT deliver here! Order directly from us."
+        },
+        {
+            "name": "Kangundo Road",
+            "fee": 200,
+            "glovo_available": false,
+            "estimated_time": "50-70 min",
+            "active": true,
+            "description": "⚠️ Glovo does NOT deliver here! Order directly from us."
+        },
+        {
+            "name": "Mlolongo",
+            "fee": 300,
+            "glovo_available": true,
+            "estimated_time": "60-80 min",
+            "active": false,
+            "description": "Currently unavailable"
+        }
+    ],
+    "settings": {
+        "default_fee": 200,
+        "free_delivery_minimum": 1000,
+        "max_order_distance": 50,
+        "currency": "KES"
+    }
+}

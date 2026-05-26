@@ -1,0 +1,31 @@
+{
+    "restaurant": {
+        "name": "Maakaso Kitchen",
+        "address": "Machakos Town, Opposite Machakos University",
+        "phone": "254712345678",
+        "email": "info@maakasokitchen.co.ke",
+        "mpesa_till": "123456",
+        "whatsapp_number": "254712345678"
+    },
+    "delivery": {
+        "default_fee": 200,
+        "free_delivery_minimum": 1000,
+        "max_distance_km": 50
+    },
+    "business_hours": {
+        "open": "08:00",
+        "close": "22:00",
+        "days": "Monday-Sunday"
+    },
+    "features": {
+        "enable_whatsapp_notifications": true,
+        "enable_mpesa": false,
+        "enable_sms": false,
+        "enable_email_receipts": false
+    },
+    "appearance": {
+        "primary_color": "#c0392b",
+        "secondary_color": "#2c3e50",
+        "accent_color": "#27ae60"
+    }
+}
